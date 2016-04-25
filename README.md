@@ -1,2 +1,2 @@
 # LeetCode
-# This is a folder for leetcode copies
+# This is a folder for leetcode code copies
