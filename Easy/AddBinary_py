@@ -19,18 +19,17 @@ class Solution(object):
         carry = False
         while (alen>=1 or blen>=1 or carry == True):
            counter = 0
-
            if (alen >= 1 and a[alen-1]== "1"):
-                 counter += 1
+             counter += 1
            if (blen >= 1 and b[blen-1] == "1"):
-                 counter += 1
+             counter += 1
            if (carry == True):
-                 counter += 1
+             counter += 1
 
            if (counter>1):
-            carry = True
+             carry = True
            else:
-            carry = False
+             carry = False
 
            if (counter % 2 == 1):
              result = "1" + result
