@@ -1,4 +1,4 @@
-/*
+###
 The count-and-say sequence is the sequence of integers beginning as follows:
 1, 11, 21, 1211, 111221, ...
 
@@ -8,7 +8,7 @@ The count-and-say sequence is the sequence of integers beginning as follows:
 Given an integer n, generate the nth sequence.
 
 Note: The sequence of integers will be represented as a string.
-*/
+###
 
 class Solution(object):
     def countAndSay(self,n):
