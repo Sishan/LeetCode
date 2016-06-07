@@ -19,3 +19,4 @@
 | 168 | Excel Sheet Column Title | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ExcelSheetColumnTitle.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ExcelSheetColumnTitle.py) | Easy|
 | 172 | Factorial Trailing Zeroes | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/FactorialTrailingZeros.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/FactorialTrailingZeros.py) | Easy|
 | 202 | Happy Number | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/HappyNumber.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/HappyNumber.py) | Easy|
+| 232 | Implement Queue using Stacks | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ImplementQueueUsingStack.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ImplementQueueUsingStack.py) | Easy|
