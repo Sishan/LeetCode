@@ -16,8 +16,8 @@ class Queue(object):
         """
         initialize your data structure here.
         """
-        self.s1 = []
-        self.s2 = []
+        self.s1 = collections.deque()
+        self.s2 = collections.deque()
 
     def push(self, x):
         """
@@ -50,7 +50,4 @@ class Queue(object):
         """
         :rtype: bool
         """
-        if self.s1:
-            return False
-        else:
-            return True
+        return not len(self.s1)
