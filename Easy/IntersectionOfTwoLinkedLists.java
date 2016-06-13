@@ -33,6 +33,7 @@ public class Solution {
                 lenB++;
             }
         }
+        if (c1 != c2) return null;
         c1=headA;						// redirect to the head
         c2=headB;
         while(lenA>lenB){				// stop at the intersection point if there is
@@ -43,12 +44,11 @@ public class Solution {
             c2=c2.next;
             lenB--;
         }
-        while(c1!=null){               // if c1!=null so there is surely an intersection point
-            if(c1==c2) return c1;
+        while(c1!= c2){               // if c1!=null so there is surely an intersection point
             c1=c1.next;                // intersection begins
             c2=c2.next;
         }
-        return null;
+        return c1;
     }
 }
 
