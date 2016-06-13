@@ -20,3 +20,6 @@
 | 172 | Factorial Trailing Zeroes | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/FactorialTrailingZeros.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/FactorialTrailingZeros.py) | Easy|
 | 202 | Happy Number | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/HappyNumber.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/HappyNumber.py) | Easy|
 | 232 | Implement Queue using Stacks | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ImplementQueueUsingStack.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ImplementQueueUsingStack.py) | Easy|
+| 225 | Implement Stack Using Queue | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ImplementStackUsingQueue.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ImplementStackUsingQueue.py) | Easy|
+| 28 | Implement StrStr() | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ImplementStrStr().java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ImplementStrStr().py) | Easy|
+| 160 | Intersection Of Two Linked Lists | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/IntersectionOfTwoLinkedLists.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/IntersectionOfTwoLinkedLists.py) | Easy|
