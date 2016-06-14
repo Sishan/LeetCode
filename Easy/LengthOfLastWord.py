@@ -1,8 +1,9 @@
-class Solution:
-    # @param {string} s
-    # @return {integer}
+class Solution(object):
     def lengthOfLastWord(self, s):
-        try:
-            return len(s.split()[-1])
-        except:
-            return 0
+        """
+        :type s: str
+        :rtype: int
+        """
+        l = s.split()
+        if len(l) == 0: return 0
+        else: return len(l[-1])
