@@ -1,4 +1,4 @@
-/*
+"""
 Invert a binary tree.
 
      4
@@ -14,7 +14,7 @@ to
   7     2
  / \   / \
 9   6 3   1
-*/
+"""
 
 # Definition for a binary tree node.
 # class TreeNode(object):
