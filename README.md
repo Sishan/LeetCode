@@ -23,3 +23,6 @@
 | 225 | Implement Stack Using Queue | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ImplementStackUsingQueue.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ImplementStackUsingQueue.py) | Easy|
 | 28 | Implement StrStr() | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ImplementStrStr().java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ImplementStrStr().py) | Easy|
 | 160 | Intersection Of Two Linked Lists | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/IntersectionOfTwoLinkedLists.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/IntersectionOfTwoLinkedLists.py) | Easy|
+| 226 | Invert Binary Tree | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/InvertBinaryTree.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/InvertBinaryTree.py) | Easy|
+| 205 | Isomorphic Strings | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/IsomorphicStrings.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/IsomorphicStrings.py) | Easy|
+| 58 | Length Of Last Word | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/LengthOfLastWord.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/LengthOfLastWord.py) | Easy|
