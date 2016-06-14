@@ -31,9 +31,7 @@ class Solution(object):
             elif mapping[s[index]] != t[index]:
                 # No 2+ characters may map to the same character.
                 return False
- 
         # Make sure that no 2+ characters may map to the same character.
         if len(set(mapping.keys())) != len(set(mapping.values())):
             return False
- 
         return True
