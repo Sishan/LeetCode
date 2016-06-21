@@ -23,6 +23,7 @@ public class Solution {
     }
 }
 
+/*
 Similar to Minimum Depth of Binary Tree - https://oj.leetcode.com/problems/minimum-depth-of-binary-tree/
 
 树的性质总结 - http://blog.csdn.net/linhuanmars/article/details/39024195
