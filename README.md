@@ -26,3 +26,8 @@
 | 226 | Invert Binary Tree | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/InvertBinaryTree.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/InvertBinaryTree.py) | Easy|
 | 205 | Isomorphic Strings | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/IsomorphicStrings.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/IsomorphicStrings.py) | Easy|
 | 58 | Length Of Last Word | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/LengthOfLastWord.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/LengthOfLastWord.py) | Easy|
+| 14 | Longest Common Prefix | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/LongestCommonPrefix.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/LongestCommonPrefix.py) | Easy|
+| 235 | Lowest Common Ancestor of a Binary Search Tree | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/LowestCommonAncestorOfABinarySearchTree.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/LowestCommonAncestorOfABinarySearchTree.py) | Easy|
+| 169 | Majority Element | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/MajorityElement.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/MajorityElement.py) | Easy|
+| 104 | Maximum Depth of Binary Tree | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/MaximumDepthOfBinaryTree.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/MaximumDepthOfBinaryTree.py) | Easy|
+| 88 | Merge Sorted Array | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/MergeSortedArray.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/MergeSortedArray.py) | Easy|
