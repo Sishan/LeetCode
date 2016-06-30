@@ -31,3 +31,7 @@
 | 169 | Majority Element | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/MajorityElement.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/MajorityElement.py) | Easy|
 | 104 | Maximum Depth of Binary Tree | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/MaximumDepthOfBinaryTree.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/MaximumDepthOfBinaryTree.py) | Easy|
 | 88 | Merge Sorted Array | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/MergeSortedArray.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/MergeSortedArray.py) | Easy|
+| 155 | Min Stack | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/MinStack.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/MinStack.py) | Easy|
+| 111 | Minimum Depth Of Binary Tree | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/MinimumDepthOfBinaryTree.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/MinimumDepthOfBinaryTree.py) | Easy|
+| 191 | Number Of 1 Bits | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/NumberOf1Bits.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/NumberOf1Bits.py) | Easy|
+
