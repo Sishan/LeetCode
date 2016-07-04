@@ -18,7 +18,7 @@ public class Solution {
         long y = 0;
         while (z != 0){
         	y = 10*y + z%10;
-        	z = z/10
+        	z = z/10;
         }
         return x == y;
     }
