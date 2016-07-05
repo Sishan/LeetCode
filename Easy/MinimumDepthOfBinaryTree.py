@@ -26,7 +26,7 @@ class Solution(object):
         helper function for recursion the tree
         """
     	if (root == None):
-    		return sys.maxint  // prevent to count not-end leaves
+    		return sys.maxint  #prevent to count not-end leaves
     	if (root.left == None and root.right == None):
     		return 1
     	return min(self.getMin(root.left), self.getMin(root.right)) + 1
