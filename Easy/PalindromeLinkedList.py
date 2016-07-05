@@ -21,7 +21,7 @@ class Solution(object):
         next = slow.next.next
         tail = slow.next
 
-        while (next != None):
+        while (next != None):   // reserve the list from the middle point 
         	temp = slow.next
         	slow.next = next
         	tail.next = next.next
