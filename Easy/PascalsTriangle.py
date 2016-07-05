@@ -27,7 +27,7 @@ class Solution(object):
         	cur = [1]
         	for y in range(len(pre)-1):
         		cur.append(pre[y] + pre[y + 1])
-        	cur.append(1)  //add "1" at the end
+        	cur.append(1)  #add "1" at the end
         	res.append(cur)
         	pre = cur
         return res
