@@ -18,7 +18,7 @@ class Solution(object):
         :rtype: bool
         """
         if (x < 0):
-        	return False  // assume that negative numbers are not palindrome
+        	return False  #assume that negative numbers are not palindrome
         z = x
         y = 0
         while (z != 0):
