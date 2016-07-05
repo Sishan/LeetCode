@@ -20,5 +20,5 @@ class Solution(object):
         for i in range(rowIndex):
         	for j in range(len(res)-2, -1, -1):
         		res[j+1] = res[j] + res[j+1]
-                res.append(1)  // add "1" on the end
+                res.append(1)   #add "1" on the end
         return res
