@@ -14,7 +14,7 @@ public class Solution {
         int top = Math.min(D,H);
         int bottom = Math.max(B,F);
 
-        int overlap = 0;
+        int overlap = 0; // count for overlap area
         if (right > left && top > bottom) overlap = (right - left) * (top - bottom);
         return areaOfSqrA + areaOfSqrB - overlap;
     }
