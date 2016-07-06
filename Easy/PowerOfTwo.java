@@ -10,6 +10,6 @@ public class Solution {
 }
 
 /*
-(x) & (x-1) == 0 → x是2的某次幂
+(x) & (x-1) == 0 → x is a power of two
 http://algorithm.yuanbin.me/math_and_bit_manipulation/o1_check_power_of_2.html
 */
