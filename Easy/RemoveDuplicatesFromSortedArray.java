@@ -12,14 +12,14 @@ Your function should return length = 2, with the first two elements of nums bein
 public class Solution {
     public int removeDuplicates(int[] nums) {
         if (nums.length < 2) return nums.length;
-        int count = 1;
+        int len = 1;
         for (int i = 1; i < nums.length; i ++){
         	if (nums[i-1] != nums[i]) {
-        		nums[count] = nums[i];
-        		count ++;
+        		nums[len] = nums[i];
+        		len ++;
         	}
         }
-        return count;
+        return len;
     }
 }
 
