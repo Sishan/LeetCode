@@ -35,3 +35,4 @@
 | 111 | Minimum Depth Of Binary Tree | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/MinimumDepthOfBinaryTree.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/MinimumDepthOfBinaryTree.py) | Easy|
 | 191 | Number Of 1 Bits | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/NumberOf1Bits.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/NumberOf1Bits.py) | Easy|
 | 234 | Palindrome Linked List | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/PalindromeLinkedList.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/PalindromeLinkedList.py) | Easy|
+| 9 | Palindrome Number | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/PalindromeNumber.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/PalindromeNumber.py) | Easy|
