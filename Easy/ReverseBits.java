@@ -17,8 +17,8 @@ public class Solution {
                                                 // 对于给定的数，从最高位开始，将其分离出来，最低位就是答案的最高位。循环32次，每次将分离出来的数乘以2^i，i=0,1,2,…,31
         int res = 0;
         for (int i = 0; i < 32; i ++){
-        	if (((1 << i) & n) != 0){
-        		res |= 1 << (31 - i);
+        	if (((1 << i) & n) != 0){          // get bit(use &), shift left
+        		res |= 1 << (31 - i);          // set bit(use |)
         	}
         }
         return res;
