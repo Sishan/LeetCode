@@ -12,7 +12,9 @@ Related problem: Reverse Integer
 
 public class Solution {
     // you need treat n as an unsigned value
-    public int reverseBits(int n) {
+    public int reverseBits(int n) {             // Bit Manipulation
+                                                // you need treat n as an unsigned value
+                                                // 对于给定的数，从最高位开始，将其分离出来，最低位就是答案的最高位。循环32次，每次将分离出来的数乘以2^i，i=0,1,2,…,31
         int res = 0;
         for (int i = 0; i < 32; i ++){
         	if (((1 << i) & n) != 0){
