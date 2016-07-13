@@ -45,4 +45,9 @@
 | 26 | Remove Duplicates From Sorted Array | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveDuplicatesFromSortedArray.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveDuplicatesFromSortedArray.py) | Easy|
 | 83 | Remove Duplicates From Sorted List | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveDuplicatesFromSortedList.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveDuplicatesFromSortedList.py) | Easy|
 | 27 | Remove Element | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveElement.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveElement.py) | Easy|
-| 203 | Remove Element | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveLinkedListElements.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveLinkedListElements.py) | Easy|
+| 203 | Remove Linked List Elements | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveLinkedListElements.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveLinkedListElements.py) | Easy|
+| 190 | Reverse Bits | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ReverseBits.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ReverseBits.py) | Easy|
+| 7 | Reverse Integer | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ReverseInteger.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ReverseInteger.py) | Easy|
+| 206 | Reverse Linked List | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ReverseLinkedList.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ReverseLinkedList.py) | Easy|
+| 13 | Roman To Integer | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RomanToInteger.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RomanToInteger.py) | Easy|
+| 189 | Rotate Array | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RotateArray.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RotateArray.py) | Easy|
