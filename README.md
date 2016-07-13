@@ -41,3 +41,8 @@
 | 112 | Path Sum | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/PathSum.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/PathSum.py) | Easy|
 | 66 | Plus One | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/PlusOne.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/PlusOne.py) | Easy|
 | 231 | Power Of Two | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/PowerOfTwo.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/PowerOfTwo.py) | Easy|
+| 223 | Rectangle Area | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RectangleArea.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RectangleArea.py) | Easy|
+| 26 | Remove Duplicates From Sorted Array | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveDuplicatesFromSortedArray.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveDuplicatesFromSortedArray.py) | Easy|
+| 83 | Remove Duplicates From Sorted List | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveDuplicatesFromSortedList.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveDuplicatesFromSortedList.py) | Easy|
+| 27 | Remove Element | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveElement.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveElement.py) | Easy|
+| 203 | Remove Element | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveLinkedListElements.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveLinkedListElements.py) | Easy|
