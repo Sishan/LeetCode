@@ -36,3 +36,13 @@
 | 191 | Number Of 1 Bits | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/NumberOf1Bits.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/NumberOf1Bits.py) | Easy|
 | 234 | Palindrome Linked List | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/PalindromeLinkedList.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/PalindromeLinkedList.py) | Easy|
 | 9 | Palindrome Number | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/PalindromeNumber.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/PalindromeNumber.py) | Easy|
+
+| 118 | Pascals Triangle | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/PascalsTriangle.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/PascalsTriangle.py) | Easy|
+
+| 119 | Pascals Triangle II | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/PascalsTriangleII.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/PascalsTriangleII.py) | Easy|
+
+| 112 | Path Sum | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/PathSum.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/PathSum.py) | Easy|
+
+| 66 | Plus One | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/PlusOne.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/PlusOne.py) | Easy|
+
+| 231 | Power Of Two | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/PowerOfTwo.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/PowerOfTwo.py) | Easy|
