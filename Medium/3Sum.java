@@ -15,10 +15,10 @@ public class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> rst = new ArrayList<List<Integer>> ();
         if (nums == null || nums.length < 3) return rst;
-        Arrays.sort(nums);
+        Arrays.sort(nums);                                                                  // sort first
         for (int i = 0; i < nums.length - 2; i ++){
         	if (i != 0 && nums[i] == nums[i - 1]){
-        		continue;
+        		continue;                                                                   // to skip duplicate numbers; e.g [0,0,0,0]     (REMEMBER the use of continue here)
         	}
         	int left = i + 1;
         	int right = nums.length - 1;
@@ -32,8 +32,8 @@ public class Solution {
         			rst.add(tmp);
         			left ++;
         			right --;
-        			while (left < right && nums[left] == nums[left - 1]) left ++;
-        			while (left < right && nums[right] == nums[right + 1]) right --;
+        			while (left < right && nums[left] == nums[left - 1]) left ++;           // to skip duplicates
+        			while (left < right && nums[right] == nums[right + 1]) right --;        // to skip duplicates
         		}
         		else if (sum < 0) {
         		    left ++;
