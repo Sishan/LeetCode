@@ -32,7 +32,6 @@ public class Solution {
 
 /*
 Dynamic Programming
-
 Similar to Maximum Subarray, Best Time to Buy and Sell Stock II / III / IV
 
 这道题求进行一次交易能得到的最大利润。如果用brute force的解法就是对每组交易都看一下利润，取其中最大的，总用有n*(n-1)/2个可能交易，所以复杂度是O(n^2)
