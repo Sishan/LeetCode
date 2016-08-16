@@ -44,8 +44,8 @@ public class Solution {
             else if (c == ')'){
                 res += sign * number;
                 number = 0;
-                res *= stack.pop();                 // stack.pop() is the sign before the parenthesis
-                res += stack.pop();                 // stack.pop() now is the result calculated before the parenthesis
+                res *= stack.pop();                  // stack.pop() is the sign before the parenthesis
+                res += stack.pop();                  // stack.pop() now is the result calculated before the parenthesis
             }
         }
         if (number != 0) res += number * sign;
