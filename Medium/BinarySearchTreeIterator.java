@@ -15,12 +15,12 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
  *     TreeNode(int x) { val = x; }
  * }
  */
-public class BSTIterator {
+public class BSTIterator {                       // BST is left<root<right, so we do inorder traversal
     private Stack<TreeNode> st;
     public BSTIterator(TreeNode root) {
         TreeNode cur = root;
         st = new Stack();
-        while (cur != null){
+        while (cur != null){                     // using stack to do Binary Tree Inorder Traversal
         	st.push(cur);
         	cur = cur.left;
         }
