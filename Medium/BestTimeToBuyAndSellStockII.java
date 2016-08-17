@@ -20,7 +20,6 @@ I: one transaction -> DP
 II: many transactions -> Greedy
 
 Similar to Maximum Subarray, Best Time to Buy and Sell Stock I / III / IV
-
 As you can complete as many transactions as you want, one can buy one whenever the next price is higher. So it is greedy algorithm
 
 这道题跟Best Time to Buy and Sell Stock类似，求最大利润。区别是这里可以交易无限多次（当然我们知道交易不会超过n-1次，也就是每天都进行先卖然后买）
