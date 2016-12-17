@@ -41,6 +41,6 @@ public class Solution{
 
 /*
 Using a boolean type carry to check, if(counter%2==1) is a good way of checking
-
+Note:
 counter % 2 == 0 can be revised as (counter&1) == 0 
 */
