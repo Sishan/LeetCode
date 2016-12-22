@@ -10,18 +10,52 @@ Here is an example of version numbers ordering:
 
 0.1 < 1.1 < 1.2 < 13.37
 */
+/*
+Notice:
+MUST use version1.split("\\."), NOT version1.split(".")
+
+int to string:
+String str = Integer.toString;
+// OR
+String str = String.valueOf(int);
+
+string to int:
+int foo = Integer.parseInt(string);
+// OR
+Integer x = Integer.valueOf(str);
+
+Test case:
+1.1, 1.1.2, 1.2
+*/
 public class Solution {
     public int compareVersion(String version1, String version2) {
-        String [] v1 = version1.split("\\.");
-        String [] v2 = version2.split("\\.");
+        String[] v1 = version1.split("\\.");
+        String[] v2 = version2.split("\\.");
 
-        for (int i = 0; i <= Math.max(v1.length, v2.length); i++){
-        	int a = i < v1.length ? Integer.valueOf(v1[i]):0;
-        	int b = i < v2.length ? Integer.valueOf(v2[i]):0;
-
-        	if (a>b) return 1;
-        	if (a<b) return -1;
+        for (int i = 0; i < Math.max(v1.length, v2.length); i ++){
+            int v1Val=i < v1.length? Integer.valueOf(v1[i]) : 0;
+            int v2Val=i < v2.length? Integer.valueOf(v2[i]) : 0;
+            if (v1Val > v2Val) return 1;
+            else if (v1Val < v2Val) return -1;
         }
         return 0;
     }
 }
+
+/*
+Notice:
+MUST use version1.split("\\."), NOT version1.split(".")
+
+int to string:
+String str = Integer.toString;
+// OR
+String str = String.valueOf(int);
+
+string to int:
+int foo = Integer.parseInt(string);
+// OR
+Integer x = Integer.valueOf(str);
+
+Test case:
+1.1, 1.1.2, 1.2
+*/

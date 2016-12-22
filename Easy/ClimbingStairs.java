@@ -11,7 +11,7 @@ public class Solution {
         if (n == 1) return 1;
         if (n == 2) return 2;
 
-        for (int i = 0; i <= n; i ++){
+        for (int i = 3; i <= n; i ++){
         	int stepThree = stepOne + stepTwo;
         	stepOne = stepTwo;
         	stepTwo = stepThree;
@@ -19,3 +19,8 @@ public class Solution {
         return stepTwo;
     }
 }
+
+/*
+Notice:
+This is Fibonacci number, time complexity is O(n)
+*/
