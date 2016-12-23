@@ -18,7 +18,7 @@ public class Solution {
     		StringBuilder sb = new StringBuilder();
     		int count  = 1;
     		for (int j = 1; j <= result.length(); j++){
-    			if ((j<result.length()) && result.charAt(j) == result.charAt(j-1)) count++;
+    			if ((j < result.length()) && result.charAt(j) == result.charAt(j-1)) count++;
     			else{
     				sb.append(count);
     				sb.append(result.charAt(j-1));
@@ -30,3 +30,11 @@ public class Solution {
     	return result;
     }
 }
+
+
+/*
+Reference:
+https://leetcode.com/discuss/37219/possible-solutions
+https://leetcode.com/discuss/37355/java-solution-with-sorting-o-nlog-n-time-o-1-space
+https://leetcode.com/discuss/37190/java-o-n-ac-solutions-with-hashset-and-bitset
+*/

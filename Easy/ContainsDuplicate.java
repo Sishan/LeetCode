@@ -16,3 +16,21 @@ public class Solution {
         return false;
     }
 }
+
+    // version 2
+    public boolean containsDuplicate(int[] nums) {
+        if(nums==null) return false;
+        Arrays.sort(nums);
+        for(int i = 1; i < nums.length; i++) {
+            if(nums[i-1] == nums[i]) return true;
+        }
+        return false;
+    }
+}
+
+/*
+Reference:
+https://leetcode.com/discuss/37219/possible-solutions
+https://leetcode.com/discuss/37355/java-solution-with-sorting-o-nlog-n-time-o-1-space
+https://leetcode.com/discuss/37190/java-o-n-ac-solutions-with-hashset-and-bitset
+*/
