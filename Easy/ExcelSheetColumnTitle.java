@@ -19,8 +19,8 @@ public class Solution {
         	int temp = n % 26;
         	n = n / 26;
         	if (temp == 0){                                 // two case, 'Z' or others
-        		sb.insert(0,'Z');
-        		n--;
+        		sb.insert(0,'Z');     
+        		n--;                                         // when 'Z' is the end title, mod operation need to minus extra one
         	}
         	else {
         		sb.insert(0, (char)(temp + 64));             // 64 comes from temp - 1 + 'A'
@@ -29,3 +29,9 @@ public class Solution {
         return sb.toString();
     }
 }
+
+/*
+Mthods:
+stringbuilder.insert()
+stringbuilder.toString()
+*/
