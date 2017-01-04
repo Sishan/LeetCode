@@ -11,7 +11,7 @@ public class Solution {
         int len = 0;		// the pointer
         while(isSame){
             for(int i=0; i<strs.length; i++){
-                if(strs[i].length()<=len || strs[i].charAt(len)!=strs[0].charAt(len)){		// for the case not the same: str[i].length<len or not the same
+                if(strs[i].length()<=len || strs[i].charAt(len)!=strs[0].charAt(len)){		// for the case not the same: str[i].length() <= len or not the same
                     isSame = false;
                     break;			// remember to jump out of this for loop if not the same
                 }

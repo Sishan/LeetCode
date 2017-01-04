@@ -23,7 +23,7 @@ public class Solution {
         }
 
         if (l1 == null){
-        	last.next = l2;
+        	last.next = l2;                // if l1 does not end, directly add the rest of l1 to last node
         }
         else {
         	last.next = l1;

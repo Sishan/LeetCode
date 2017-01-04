@@ -22,7 +22,7 @@ public class Solution {
     			else{
     				sb.append(count);
     				sb.append(result.charAt(j-1));
-    				count = 1
+    				count = 1；
     			}
     		}
     		result = sb.toString();

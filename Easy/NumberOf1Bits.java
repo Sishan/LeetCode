@@ -15,3 +15,18 @@ public class Solution {
         return res;
     }
 }
+
+//version # 2 
+public int hammingWeight(int n) {
+    int sum = 0;
+    while (n != 0) {
+        sum++;
+        n &= (n - 1);
+    }
+    return sum;
+}
+
+/*
+The key idea of the second idea is taht in the binary representation, the least significant 11-bit in nn always corresponds to a 00-bit in n - 1n−1. 
+Therefore, anding the two numbers nn and n - 1n−1 always flips the least significant 11-bit in nn to 00, and keeps all other bits the same.
+*/

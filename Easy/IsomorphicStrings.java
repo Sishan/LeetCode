@@ -32,10 +32,10 @@ public class Solution {
         		if (hm.get(sChar) != tChar){                    //if map already contains key, make sure value is the same
         			return false;
         		}
-        	} else if (hm.containsValue(tChar)){              // if map doesn't contain the key, make sure it doesn't already contain the value
+        	} else if (hm.containsValue(tChar)){                // if map doesn't contain the key, make sure it doesn't already contain the value
         		return false;
         	} else {
-        		hm.put(sChar,tChar);   // otherwise insert key, value pair
+        		hm.put(sChar,tChar);                            // otherwise insert key, value pair
         	}
         }
         return true;

@@ -25,6 +25,16 @@ For example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. Another exa
  */
 public class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if (root.val > p.val && root.val < q.val) return root;
+        if (root.val > p.val && root.val > q.val) return lowestCommonAncestor(root.left, p ,q);
+        if (root.val < p.val && root.val < q.val) return lowestCommonAncestor(root.right, p, q);
+        return root;
+    }
+}
+
+//Version 2, slower than above, but great idea
+public class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q) return root;
         
         //Divide
@@ -39,13 +49,3 @@ public class Solution {
     }
 }
 
-
-// version 2
-public class Solution {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root.val > p.val && root.val < q.val) return root;
-        if (root.val > p.val && root.val > q.val) return lowestCommonAncestor(root.left, p ,q);
-        if (root.val < p.val && root.val < q.val) return lowestCommonAncestor(root.right, p, q);
-        return root;
-    }
-}

@@ -39,8 +39,27 @@ class MyStack {
     }
 }
 
+
+
 /*
 Reference:
 https://leetcode.com/discuss/39799/two-possible-solutions
 https://leetcode.com/discuss/39814/concise-1-queue-java-c-python
+
+peek()
+element()
+poll()
+remove()
+
+The peek() method retrieves the value of the first element of the queue without removing it from the queue. 
+For each invocation of the method we always get the same value and its execution does not affect the size of the queue. 
+If the queue is empty the peek() method returns null.
+
+The element() method behaves like peek(), so it again retrieves the value of the first element without removing it. 
+Unlike peek (), however, if the list is empty element() throws a NoSuchElementException
+
+The poll() method retrieves the value of the first element of the queue by removing it from the queue. 
+At each invocation it removes the first element of the list and if the list is already empty it returns null but does not throw any exception.
+
+The remove() method behaves as the poll() method, so it removes the first element of the list and if the list is empty it throws a NoSuchElementException
 */
