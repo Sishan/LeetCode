@@ -22,13 +22,9 @@ public class Solution {
         int pre = res;
         for (int i = len - 2; i >=0; i --){
             int cur = value.get(s.charAt(i));
-        	if (cur < pre){
-        		res -= cur;
-        	}
-        	else{
-        		res += cur;
-        	}
-        	pre = cur;
+            if (cur < pre) res -= cur;
+            else res += cur;
+            pre = cur;
         }
         return res;
 
