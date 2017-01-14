@@ -25,7 +25,7 @@ class MyStack {
 
     // Removes the element on top of the stack.
     public void pop() {
-        queue.remove(); // remove and return the head of the queue
+        queue.poll(); // remove and return the head of the queue
     }
 
     // Get the top element.
