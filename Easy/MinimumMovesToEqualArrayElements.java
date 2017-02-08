@@ -25,3 +25,8 @@ public class Solution {
         return moves - min * nums.length;
     }
 }
+
+/*
+Adding 1 to n - 1 elements is the same as subtracting 1 from one element, w.r.t goal of making the elements in the array equal.
+So, best way to do this is make all the elements in the array equal to the min element.
+*/

@@ -27,3 +27,32 @@ public class Solution {
         return res;
     }
 }
+
+//Follow up with duplicate
+
+public class Solution {
+    public List<String> summaryRanges(int[] nums) {
+        List<String> res =  new ArrayList<String>();
+        if (nums == null || nums.length == 0) return res;
+        int start = 0, end = 0;
+        for (int i = 0; i < nums.length; i ++){
+            
+            if ((i + 1 < nums.length && nums[i+1] == nums[i] + 1) || (i + 1 < nums.length && nums[i+1] == nums[i])){
+                end++;
+            }
+            
+            else if (start == end || nums[start] == nums[end]){
+                res.add(String.valueOf(nums[start]));
+                end++;
+                start = end;
+            }
+            
+            else {
+                res.add(String.valueOf(nums[start]) + "->" + String.valueOf(nums[end]));
+                end++;
+                start = end;
+            }
+        }
+        return res;
+    }
+}
