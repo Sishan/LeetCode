@@ -22,3 +22,7 @@ public class Solution {
         return -1;
     }
 }
+
+//UTF-8 encoded string to Java String
+byte[] u = "Üü?öäABC".getBytes("UTF-8");
+System.out.println(new String(u,"UTF-8"));
