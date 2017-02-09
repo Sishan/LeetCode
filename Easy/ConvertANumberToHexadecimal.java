@@ -28,7 +28,7 @@ public class Solution {
         if (num == 0) return "0";
         StringBuilder res = new StringBuilder();
         while(num != 0){
-            int digit = num & 0xf;
+            int digit = num & 0xf;  //0xf = 0000 0000 0000 0000 0000 0000 0000 1111
             res.insert(0, digit < 10 ? (char)(digit + '0') : (char)(digit - 10 + 'a'));
             num >>>= 4;
         }

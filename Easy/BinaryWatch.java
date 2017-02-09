@@ -24,7 +24,8 @@ public class Solution {
         for (int h = 0; h < 12; h++){
             for (int m = 0; m < 60; m++){
                 if (Integer.bitCount(h*64 + m) == num){
-                    res.add(String.format( "%d:%02d", h, m));
+                    res.add(String.format( "%d:%02d", h, m));  // %02d, first "0" means "pad with zero", 
+                                                               //"2" means "to two digits" and "d" means "digits"
                 }
             }
         }
