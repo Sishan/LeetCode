@@ -23,7 +23,7 @@ public class Solution {
         String[] tmp = s.split("\\s+");					// "\\s" means one space, "\\s+" means one/more spaces, " " means one space, " +" means one/more spaces
         StringBuilder res = new StringBuilder();
         for (int i = tmp.length - 1; i >= 0; i--){
-            if (tmp[i].equals(" ")) continue;
+            //if (tmp[i].equals(" ")) continue;         //in fact, this will not happen
             res.append(tmp[i] + " ");
         }
         return res.toString().trim();
