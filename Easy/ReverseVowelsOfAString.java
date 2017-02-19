@@ -21,9 +21,8 @@ public class Solution {
         while (left < right){
             while (left < right && !vowels.contains(String.valueOf(s.charAt(left)))) left++;
             while (left < right && !vowels.contains(String.valueOf(s.charAt(right)))) right--;
-            char tmp = varray[left];
-            varray[left] = varray[right];
-            varray[right] = tmp;
+            varray[left] = s.charAt(right);
+            varray[right] = s.charAt(left);
             left ++;
             right --;
         }
