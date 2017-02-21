@@ -28,7 +28,7 @@ public class Solution {
         Arrays.sort(g);
         Arrays.sort(s);
         int i = 0;
-        for(int j=0; i < g.length && j < s.length; j++) {
+        for(int j=0; i < g.length && j < s.length; j++) {     // cannot define i inside for loop since we will need to return i value at the end
         	if(g[i]<=s[j]) i++;
         }
         return i;
