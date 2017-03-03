@@ -48,14 +48,11 @@ public class Solution {
             stack.push(len);
             
             if (s.contains(".")) maxLen = Math.max(maxLen, len - 1);    // check if it is file
-
         }
         return maxLen;
     }
 }
-
-
-// Better soluton 
+/* Better soluton*/
 
 public class Solution {
     public int lengthLongestPath(String input) {
