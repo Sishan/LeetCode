@@ -11,7 +11,6 @@ Space complexity should be O(n).
 Can you do it like a boss? Do it without using any builtin function like __builtin_popcount in c++ or in any other language.
 */
 
-
 public class Solution {
     public int[] countBits(int num) {
         int[] res = new int[num + 1];
