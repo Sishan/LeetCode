@@ -12,6 +12,7 @@
 | 70 | Climbing Stairs | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ClimbingStairs.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ClimbingStairs.py) | Easy|
 | 165 | Compare Version Numbers | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/CompareVersionNumber.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/CompareVersionNumber.py) | Easy|
 | 217 | Contains Duplicate | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ContainsDuplicate.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ContainsDuplicate.py) | Easy|
+| 219| Contains Duplicate II | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ContainsDuplicateII.java) | Easy|
 | 38 | Count and Say | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/CountAndSay.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/CountAndSay.py) | Easy|
 | 204 | Count Primes | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/CountPrimes.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/CountPrimes.py) | Easy|
 | 237 | Delete Node in a Linked List | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/DeleteNodeInALinkedList.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/DeleteNodeInALinkedList.py) | Easy|
@@ -53,7 +54,11 @@
 | 189 | Rotate Array | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RotateArray.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RotateArray.py) | Easy|
 |19 | Remove Nth Node From End of List | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveNthNodeFromEndOfList.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveNthNodeFromEndOfList.py) | Easy|
 | 100 | Same Tree | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/SameTree.java)| Easy|
-| 219| Contains Duplicate II | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ContainsDuplicateII.java) | Easy|
-| 8| String to Integer (atoi) | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/StringToInteger.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/StringToInteger.py) | Easy|
+| 8| String to Integer (atoi) | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/StringToInteger.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/StringToInteger.py) | Medium|
+| 228| Summary Ranges | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/SummaryRanges.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/SummaryRanges.py) | Easy|
+| 101| Symmetric Tree | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/SymmetricTree.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/SymmetricTree.py) | Easy|
+| 263| Unly Number | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/UglyNumber.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/UglyNumber.py) | Easy|
+| 242| Valid Anagram | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ValidAnagram.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/ValidAnagram.py) | Easy|
+
 
 
