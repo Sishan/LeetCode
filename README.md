@@ -54,4 +54,6 @@
 |19 | Remove Nth Node From End of List | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveNthNodeFromEndOfList.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/RemoveNthNodeFromEndOfList.py) | Easy|
 | 100 | Same Tree | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/SameTree.java)| Easy|
 | 219| Contains Duplicate II | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/ContainsDuplicateII.java) | Easy|
+| 8| String to Integer (atoi) | [Java](https://github.com/Sishan/LeetCode/blob/master/Easy/StringToInteger.java), [Python](https://github.com/Sishan/LeetCode/blob/master/Easy/StringToInteger.py) | Easy|
+
 
