@@ -46,6 +46,16 @@ public class Solution {
         
         return dummy.next;
     }
+
+   // obtain the length of list
+    public int length(ListNode head) {
+        int len = 0;
+        while(head != null) {
+            head = head.next;
+            len++;
+        }
+        return len;
+    }
     
     // get the right side node for each merge sort step
     public ListNode split(ListNode head, int step) {
@@ -57,16 +67,6 @@ public class Solution {
         ListNode res = head.next;
         head.next = null;
         return res;
-    }
-
-    // obtain the length of list
-    public int length(ListNode head) {
-        int len = 0;
-        while(head != null) {
-            head = head.next;
-            len++;
-        }
-        return len;
     }
     
     // merge two lists, start with dymmyRes (ListNode(0)) and followed by smallest element 
