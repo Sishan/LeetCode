@@ -46,10 +46,8 @@ Reference:
 https://leetcode.com/discuss/39799/two-possible-solutions
 https://leetcode.com/discuss/39814/concise-1-queue-java-c-python
 
-peek()
-element()
-poll()
-remove()
+peek() / element() wihtout removing the element
+poll() / remove() removing the element
 
 The peek() method retrieves the value of the first element of the queue without removing it from the queue. 
 For each invocation of the method we always get the same value and its execution does not affect the size of the queue. 
