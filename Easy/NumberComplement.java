@@ -17,7 +17,6 @@ Explanation: The binary representation of 1 is 1 (no leading zero bits), and its
 public class Solution {
     public int findComplement(int num) {  
         int mask = (Integer.highestOneBit(num) << 1) - 1;          //git the highest '1' bit and set the mask
-        num = ~num;
-        return num & mask;
+        return num ^ mask;
     }
 }
