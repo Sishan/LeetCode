@@ -28,8 +28,7 @@ public class Solution {
         			break;
         	}
         }
-        if (stack.isEmpty()) return true;
-        return false;
+        return stack.isEmpty();				// finally we need to check if we used all parentheses in the stack
     }
 }
 

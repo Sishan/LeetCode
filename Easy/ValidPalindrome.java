@@ -16,7 +16,7 @@ For the purpose of this problem, we define empty string as valid palindrome.
 // Faster solution using two pointer
 public class Solution {
   public boolean isPalindrome(String s) {
-      if(s == null || s.length() == 0 || s.length() == 1) return true;
+      if(s == null || s.length() <= 1) return true;
       int left = 0;
       int right = s.length() - 1;
       s = s.toLowerCase();
