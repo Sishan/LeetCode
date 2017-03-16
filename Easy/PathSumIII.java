@@ -37,7 +37,7 @@ Return 3. The paths that sum to 8 are:
 
 public class Solution {
     public int pathSum(TreeNode root, int sum) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         map.put(0, 1);
         return backTrack(root, 0, sum, map);
     }
