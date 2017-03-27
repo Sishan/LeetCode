@@ -58,5 +58,5 @@ public class Solution {
 
 /*
 Reference:
-https://discuss.leetcode.com/topic/38014/java-oms-with-explanation
+https://discuss.leetcode.com/topic/38014/java-oms-with-explanation     
 */
