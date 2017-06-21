@@ -13,9 +13,10 @@ return [0, 1].
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        if (nums == null || nums.length < 2) throw new IllegalArgumentException("Wrong input!");
         for (int i = 0; i < nums.length; i++){
             int comp = target - nums[i];
-            if (map.containsKey(comp)) return new int[] {map.get(comp),i};
+            if (map.containsKey(comp)) return new int[] {map.get(comp),i}; // notice the method to create new array
             map.put(nums[i], i);
         }
         throw new IllegalArgumentException("No two sum solution");
