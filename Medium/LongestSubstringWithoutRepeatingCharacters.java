@@ -17,7 +17,7 @@ public class Solution {
         int max = 0;
         for (int i = 0, j = 0; i < s.length(); i++){
             if (map.containsKey(s.charAt(i))){
-                j = Math.max(j, map.get(s.charAt(i)) + 1);
+                j = Math.max(j, map.get(s.charAt(i)) + 1); // testcase: "abba"
             }
             map.put(s.charAt(i), i);
             max = Math.max(max, i - j + 1);
