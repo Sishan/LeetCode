@@ -6,12 +6,12 @@ Note: You may not slant the container and n is at least 2.
 
 public class Solution {
     public int maxArea(int[] height) {
-        if (height == null || height.length == 0) return 0;
+        if (height == null || height.length < 0) return 0;
         int maxArea = 0;
         int left = 0, right = height.length - 1;
         while (left < right){
             maxArea = Math.max(maxArea, Math.min(height[left], height[right]) * (right - left));
-            if (height[left] < height[right]) left++;
+            if (height[left] < height[right]) left++;  // only remove one side per time
             else right--;
         }
         return maxArea;
