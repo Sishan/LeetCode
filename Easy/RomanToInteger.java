@@ -22,6 +22,7 @@ public class Solution {
         int pre = res;
         for (int i = len - 2; i >=0; i --){
             int cur = value.get(s.charAt(i));
+            // note the logic here: only compare cur with pre
             if (cur < pre) res -= cur;
             else res += cur;
             pre = cur;
