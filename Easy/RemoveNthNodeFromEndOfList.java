@@ -22,6 +22,7 @@ Try to do this in one pass.
  */
 public class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
+        if (head == null) return head;
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode fast = head;
