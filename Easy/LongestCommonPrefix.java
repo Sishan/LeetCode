@@ -32,6 +32,24 @@ Space complexity is O(m)
 Another solution is substring, run time is O(1):
 result.substring(0,len)
 
+public class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0) return "";
+        int pos = 0;
+        boolean isVaild = true;
+        while(isVaild){
+            for (int i = 0; i < strs.length; i++){
+                if (strs[i].length() <= pos || strs[i].charAt(pos) != strs[0].charAt(pos)){
+                    isVaild = false;
+                    break;
+                }
+            }
+            if (isVaild) pos++;
+        }
+        return pos > strs[0].length() ? strs[0] : strs[0].substring(0, pos);
+    }
+}
+
 See this solution at:
 https://yusun2015.wordpress.com/2015/01/12/longest-common-prefix
 */
