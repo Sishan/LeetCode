@@ -7,7 +7,7 @@ The brackets must close in the correct order, "()" and "()[]{}" are all valid bu
 public class Solution {
     public boolean isValid(String s) {
         if (s == null || s.length() == 0) return true;
-        LinkedList<Character> stack = new LinkedList();
+        LinkedList<Character> stack = new LinkedList(); // note it is also valid with Stack<Character> stack = new Stack();
         for (int i = 0; i < s.length(); i ++){
         	switch(s.charAt(i)){
         		case '(' :
