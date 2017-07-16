@@ -8,46 +8,45 @@ A valid Sudoku board (partially filled) is not necessarily solvable. Only the fi
 */
 
 public class Solution {
-    public boolean isValidSudoku(char[][] board) {							// use boolean array to store every nine element set(row, column and sub matrix)
-    	boolean[] visited = new boolean[9];
-    	for (int i = 0; i < 9; i ++){										// check each row
-    		Arrays.fill(visited, false);
-    		for (int j = 0; j < 9; j ++){
-    			if (! checkHelper(visited, board[i][j])){
-    				return false;
-    			}
-    		}
-    	} 
+	public boolean isValidSudoku(char[][] board) {
+		if (board.length < 9 || board[0].length < 9 || board == null)
+			return false;
+		boolean[] rowLine = new boolean[9];
+		boolean[] colLine = new boolean[9];
+		boolean[] subMatriLine = new boolean[9];
 
-    	for (int i = 0; i < 9; i ++){ 										// check each column
-    		Arrays.fill(visited, false);
-    		for (int j = 0; j < 9; j ++){
-    			if (! checkHelper(visited, board[j][i])){
-    				return false;
-    			}
-    		}
-    	}
+		for (int i = 0; i < 9; i++) {
+			Arrays.fill(rowLine, false);
+			Arrays.fill(colLine, false);
+			for (int j = 0; j < 9; j++) {
+				if (!isValid(rowLine, board[i][j]))
+					return false;
+				if (!isValid(colLine, board[j][i]))
+					return false;
+			}
+		}
 
-    	for (int i = 0; i < 9; i += 3){  									// check sub matrix
-    		for (int j = 0; j < 9; j += 3){
-    			Arrays.fill(visited, false);
-    			for (int k = 0; k < 9; k ++){
-    				if (! checkHelper(visited, board[i + k/3][j + k%3])){ 	// board[i + k/3][ j + k%3] is sub matrix index
-    					return false;
-    				}
-    			}
-    		}
-    	}
-    	return true;
-    }
+		for (int i = 0; i < 9; i += 3) {
+			for (int j = 0; j < 9; j += 3) {
+				Arrays.fill(subMatriLine, false);
+				for (int k = 0; k < 9; k++) {
+					if (!isValid(subMatriLine, board[i + k / 3][j + k % 3]))
+						return false; //sub matrix index
+				}
+			}
+		}
+		return true;
+	}
 
-    private boolean checkHelper(boolean[] visited, char digit){    			// helper function to check if each input elemet is valid
-    	if (digit == '.') return true;
-    	int num = digit - '0';
-    	if (num < 1 || num > 9 || visited[num - 1]) return false;
-    	visited[num - 1] = true;
-    	return true;
-    }
+	public boolean isValid(boolean[] line, char digit) { // helper function to check if each input elemet is valid
+		if (digit == '.')
+			return true;
+		int num = digit - '0';
+		if (num < 1 || num > 9 || line[num - 1])
+			return false;
+		line[num - 1] = true;
+		return true;
+	}
 }
 
 /*

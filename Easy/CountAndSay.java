@@ -11,26 +11,27 @@ Note: The sequence of integers will be represented as a string.
 */
 
 public class Solution {
-    public String countAndSay(int n) {
-    	if (n <= 0) return "";
-    	String result = "1";
-    	for (int i = 2; i <= n; i++){
-    		StringBuilder sb = new StringBuilder();
-    		int count  = 1;
-    		for (int j = 1; j <= result.length(); j++){
-    			if ((j < result.length()) && result.charAt(j) == result.charAt(j-1)) count++;
-    			else{
-    				sb.append(count);
-    				sb.append(result.charAt(j-1));
-    				count = 1；
-    			}
-    		}
-    		result = sb.toString();
-    	}
-    	return result;
-    }
+	public String countAndSay(int n) {
+		if (n <= 0)
+			return "";
+		String res = "1";
+		for (int i = 1; i < n; i++) {
+			int count = 1;
+			StringBuilder new_res = new StringBuilder();
+			for (int j = 1; j <= res.length(); j++) {
+				if (j < res.length() && res.charAt(j) == res.charAt(j - 1))
+					count++;
+				else {
+					new_res.append(count);
+					new_res.append(res.charAt(j - 1));
+					count = 1;
+				}
+			}
+			res = new_res.toString();
+		}
+		return res;
+	}
 }
-
 
 /*
 Reference:
