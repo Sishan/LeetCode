@@ -14,6 +14,24 @@ Note: All inputs will be in lower-case.
 
 public class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
+        if (strs == null || strs.length == 0) return new ArrayList<List<String>>();
+        Map<String, List<String>> map = new HashMap<String, List<String>>();
+        for (String s : strs){
+            char[] carray = s.toCharArray();
+            Arrays.sort(carray);
+            String keyStr = String.valueOf(carray);
+            if (!map.containsKey(keyStr)){
+                map.put(keyStr, new ArrayList<String>());
+            }
+            map.get(keyStr).add(s);
+        }
+        return new ArrayList<List<String>>(map.values());
+    }
+}
+
+/*
+public class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String, List<String>> map = new HashMap<String, List<String>>();
         for (int i = 0; i < strs.length; i ++){
         	char[] c = strs[i].toCharArray();						// first turn string to char array
@@ -37,6 +55,7 @@ public class Solution {
         return res;
     }
 }
+*/
 
 /*
 注意熟悉hashmap和list的常用方法操作！！！

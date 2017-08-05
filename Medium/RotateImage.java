@@ -8,7 +8,7 @@ Could you do this in-place?
 */
 
 public class Solution {
-    public void rotate(int[][] matrix) {
+    public void rotate(int[][] matrix) { // firstly transpose the matrix and then flip it symmetrically
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) return;
         
         for(int i = 0; i < matrix.length; i++){

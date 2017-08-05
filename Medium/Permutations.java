@@ -16,20 +16,23 @@ For example,
 public class Solution {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList<List<Integer>>();
-        ArrayList<Integer> tempList = new ArrayList<Integer>();
-        backTrack(res, tempList, nums);
+        if (nums == null || nums.length == 0)
+            return res;
+        backTrack(res, new ArrayList<>(), nums);
         return res;
     }
-    
-    public void backTrack(List<List<Integer>> res, ArrayList<Integer> tempList, int[] nums){
-        if (tempList.size() == nums.length) {
-            res.add(new ArrayList<>(tempList));}        // need to creat new ArrayList<> object here
-        else {
-            for (int i = 0; i < nums.length; i++){
-                if (tempList.contains(nums[i])) continue;
-                tempList.add(nums[i]);
-                backTrack(res, tempList, nums);
-                tempList.remove(tempList.size() - 1);
+
+    public void backTrack(List<List<Integer>> res, ArrayList<Integer> tmp, int[] nums) {
+        if (tmp.size() == nums.length) {
+            res.add(new ArrayList<Integer>(tmp)); // need to creat new ArrayList() object here
+        } else {
+            for (int i = 0; i < nums.length; i++) {
+                if (tmp.contains(nums[i])) {
+                    continue;
+                }
+                tmp.add(nums[i]);
+                backTrack(res, tmp, nums);
+                tmp.remove(tmp.size() - 1);
             }
         }
     }
