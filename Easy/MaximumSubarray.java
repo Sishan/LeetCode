@@ -12,12 +12,12 @@ If you have figured out the O(n) solution, try coding another solution using the
 
 public class Solution {
     public int maxSubArray(int[] nums) {
-        if (nums == null || nums.length == 0) return -1;
-        int preMax = nums[0], curMax = nums[0];
-        for (int i = 1;  i < nums.length; i++){
-            preMax = Math.max(preMax + nums[i], nums[i]);
-            curMax = Math.max(preMax, curMax);
+        if (nums == null || nums.length == 0)return-1; 
+        int preMax = nums[0], curMax = nums[0]; 
+        for (int i = 1; i < nums.length; i +  + ) {
+            preMax = Math.max(preMax + nums[i], nums[i]); 
+            curMax = Math.max(preMax, curMax); 
         }
-        return curMax;
+        return curMax; 
     }
 }
