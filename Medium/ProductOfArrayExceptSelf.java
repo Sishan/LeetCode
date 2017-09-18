@@ -9,19 +9,26 @@ Follow up:
 Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)
 */
 
-public class Solution {
+class Solution {
     public int[] productExceptSelf(int[] nums) {
-        if (nums == null || nums.length == 0) return nums;
+        if (nums == null || nums.length == 0)
+            return nums;
         int[] res = new int[nums.length];
-        res[0] = 1;
-        for (int i = 1; i < nums.length; i++){
-            res[i] = res[i-1] * nums[i-1];
-        }
+        Arrays.fill(res, 1);
+
+        int left = 1;
         int right = 1;
-        for (int j = nums.length - 1; j >= 0; j--){
+
+        for (int i = 0; i < nums.length; i++) {
+            res[i] *= left;
+            left *= nums[i];
+        }
+
+        for (int j = nums.length - 1; j >= 0; j--) {
             res[j] *= right;
             right *= nums[j];
         }
         return res;
+
     }
 }
