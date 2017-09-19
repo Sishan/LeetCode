@@ -6,6 +6,45 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+
+class Solution {
+	public boolean isPalindrome(ListNode head) {
+		if (head == null)
+			return true;
+		ListNode fast = head, slow = head;
+
+		while (fast != null && fast.next != null) {
+			fast = fast.next.next;
+			slow = slow.next;
+		}
+
+		if (fast != null) {
+			slow = slow.next;
+		}
+
+		slow = reverse(slow);
+
+		while (slow != null && slow.val == head.val) {
+			slow = slow.next;
+			head = head.next;
+		}
+
+		return slow == null;
+	}
+
+	public ListNode reverse(ListNode head) {
+		ListNode pre = null;
+		while (head != null) {
+			ListNode next = head.next;
+			head.next = pre;
+			pre = head;
+			head = next;
+		}
+		return pre;
+	}
+}
+
+/*
 public class Solution  {
 	public boolean isPalindrome(ListNode head) {
 		if (head == null || head.next == null) return true;
@@ -35,7 +74,7 @@ public class Solution  {
 		return true;
 	}
 }
-
+*/
 
 /*
 https://leetcode.com/discuss/44792/share-my-o-n-o-1-java-solution

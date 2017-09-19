@@ -30,8 +30,10 @@ public class Solution {
             node = node.next.next;
         }
         
-        RandomListNode newHead = head.next;     // third round scan, to separate all copied nodes to form new linkedlist
-        node = head;
+        RandomListNode newHead = head.next;    
+
+
+        node = head;                             // third round scan, to separate all copied nodes to form new linkedlist
         while (node != null){
             RandomListNode newNode = node.next;
             node.next = newNode.next;
