@@ -30,6 +30,24 @@ public class Solution {
     }
 }
 
+
+/*
+class Solution {
+    public int maxProfit(int[] prices) {
+        if (prices == null || prices.length == 0) return 0;
+        int min = prices[0];
+        int profit = 0;
+        
+        for (int i = 0; i < prices.length; i++){
+            int cur = prices[i];
+            min = Math.min(min, cur);
+            profit = Math.max(profit, cur - min);
+        }
+        return profit;
+    }
+}
+*/
+
 /*
 Dynamic Programming
 Similar to Maximum Subarray, Best Time to Buy and Sell Stock II / III / IV
