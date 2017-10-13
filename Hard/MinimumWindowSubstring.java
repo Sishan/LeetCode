@@ -57,3 +57,8 @@ class Solution {
         return minLen == s.length() + 1 ? "" : s.substring(minLeft, minLeft + minLen);
     }
 }
+
+/*
+Reference:
+https://discuss.leetcode.com/topic/21143/java-solution-using-two-pointers-hashmap/6
+*/
