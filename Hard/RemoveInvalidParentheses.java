@@ -17,7 +17,7 @@ class Solution {
     }
 
     public void remove(List<String> res, String s, char[] par, int last_i, int last_j) {
-        for (int stack = 0, i = last_i; i < s.length(); i++) {
+        for (int stack = 0, i = last_i; i < s.length(); i++) {  // stack as counter to check if it is valid
             if (s.charAt(i) == par[0]) {
                 stack++;
             }
@@ -36,9 +36,9 @@ class Solution {
         }
 
         String reversed = new StringBuilder(s).reverse().toString();
-        if (par[0] == '(') {
+        if (par[0] == '(') {  // this case, we still need to process string with reversed version
             remove(res, reversed, new char[] { ')', '(' }, 0, 0);
-        } else {
+        } else {  // reverse string is processed and go ahead to add it to the result
             res.add(reversed);
         }
     }
