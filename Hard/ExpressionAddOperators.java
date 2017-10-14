@@ -12,7 +12,7 @@ Examples:
 class Solution {
     public List<String> addOperators(String num, int target) {
         List<String> res = new ArrayList<String>();
-        helper(res, new StringBuilder(), num, target, 0, 0, 0);
+        helper(res, new StringBuilder(), num, target, 0, 0, 0);  // use StringBuilder to speed up
         return res;
     }
     
@@ -29,7 +29,7 @@ class Solution {
                 break;
             }
             long cur = Long.parseLong(num.substring(pos, i + 1));
-            int len = path.length();
+            int len = path.length();        // every time need to use setLength()
             if (pos == 0){
                 helper(res, path.append(cur), num, target, i + 1, cur, cur);
                 path.setLength(len);

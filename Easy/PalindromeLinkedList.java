@@ -18,7 +18,7 @@ class Solution {
 			slow = slow.next;
 		}
 
-		if (fast != null) {
+		if (fast != null) {    // odd length list
 			slow = slow.next;
 		}
 
