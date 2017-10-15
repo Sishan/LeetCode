@@ -47,7 +47,9 @@ public class Solution {
             int len = stack.peek() + s.length() - lev + 1;				// remove "/t", add"/"
             stack.push(len);
             
-            if (s.contains(".")) {maxLen = Math.max(maxLen, len - 1); }   // be careful, len - 1
+            if (s.contains(".")) {
+                maxLen = Math.max(maxLen, len - 1);   // be careful, len - 1
+            }   
         }
         return maxLen;
     }
