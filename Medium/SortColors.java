@@ -17,19 +17,19 @@ Could you come up with an one-pass algorithm using only constant space?
 
 class Solution {
     public void sortColors(int[] nums) {
-        if (nums == null || nums.length == 0){
+        if (nums == null || nums.length == 0) {
             return;
         }
         int zeroIdx = 0, twoIdx = nums.length - 1;
-        for (int i = 0; i < nums.length; i++){
+        for (int i = 0; i < nums.length; i++) {
             // for all 2s, swap to the right
-            while(nums[i] == 2 && i < twoIdx){
+            while (nums[i] == 2 && i < twoIdx) {
                 nums[i] = nums[twoIdx];
                 nums[twoIdx] = 2;
                 twoIdx--;
             }
             // for all 0s, swap to the left
-            while(nums[i] == 0 && i > zeroIdx){
+            while (nums[i] == 0 && i > zeroIdx) {
                 nums[i] = nums[zeroIdx];
                 nums[zeroIdx] = 0;
                 zeroIdx++;
