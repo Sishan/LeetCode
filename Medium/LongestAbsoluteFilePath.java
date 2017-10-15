@@ -39,7 +39,7 @@ Notice that a/aa/aaa/file1.txt is not the longest file path, if there is another
 public class Solution {
     public int lengthLongestPath(String input) {
         LinkedList<Integer> stack = new LinkedList<Integer>();
-        stack.push(0);
+        stack.push(0);  // for the dir
         int maxLen = 0;
         for (String s: input.split("\n")){
             int lev = s.lastIndexOf("\t") + 1;							// number of "\t"
@@ -47,7 +47,7 @@ public class Solution {
             int len = stack.peek() + s.length() - lev + 1;				// remove "/t", add"/"
             stack.push(len);
             
-            if (s.contains(".")) maxLen = Math.max(maxLen, len - 1);    // check if it is file
+            if (s.contains(".")) {maxLen = Math.max(maxLen, len - 1); }   // be careful, len - 1
         }
         return maxLen;
     }
