@@ -1,3 +1,4 @@
 // Place your settings in this file to overwrite default and user settings.
-{ "java.home": "/usr/lib/jvm/java-8-openjdk-amd64"
+//{ "java.home": "/usr/lib/jvm/java-8-openjdk-amd64"
+    { "java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home"
 }
