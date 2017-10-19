@@ -16,16 +16,18 @@ class Solution {
         }
         int[] map = new int[26];
         int pos = 0;
+
+        // Record frequency for each char
         for (char ch : s.toCharArray()) {
             map[ch - 'a']++;
         }
 
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) < s.charAt(pos)) {
-                pos = i;
+                pos = i;                        // record the smallest char
             }
             if (--map[s.charAt(i) - 'a'] == 0) {
-                break;
+                break;                          // if frequency == 1, break
             }
         }
         return s.length() == 0 ? ""
