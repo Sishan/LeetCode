@@ -24,10 +24,10 @@ class Solution {
 
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) < s.charAt(pos)) {
-                pos = i;                        // record the smallest char
+                pos = i; // record the smallest char
             }
             if (--map[s.charAt(i) - 'a'] == 0) {
-                break;                          // if frequency == 1, break
+                break; // if frequency == 1, break
             }
         }
         return s.length() == 0 ? ""
