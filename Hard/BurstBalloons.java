@@ -44,6 +44,7 @@ class Solution {
         }
         int res = 0;
         for (int i = left + 1; i < right; i++) {
+            // divide and conquer
             res = Math.max(tmp[left] * tmp[i] * tmp[right] + burst(tmp, dp, left, i) + burst(tmp, dp, i, right), res);
         }
         dp[left][right] = res;
