@@ -20,35 +20,32 @@ public class Solution {
         int number = 0;
         Stack<Integer> stack = new Stack<Integer>();
 
-        for (int i = 0; i < s.length(); i ++){
-        	char c = s.chatAt(i);
-        	if (Character.isDigit(c)){
-        		number = number * 10 + (c - '0');
-        	}
-        	else if (c == '+'){
-        		res += sign * number;
-        		number = 0;
-        		sign = 1;
-        	}
-        	else if (c == '-'){
-        		res += sign * number;
-        		number = 0;
-        		sign = -1;
-        	}
-        	else if (c == '('){
-        		stack.push(res);                      // we push the result first, then sign;
-                stack.push(sign);                     // reset the sign and result for the value in the parenthesis
-                res = 0;
-                sign = 1;
-        	}
-            else if (c == ')'){
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.chatAt(i);
+            if (Character.isDigit(c)) { // c >= '0' && c <= '9'
+                number = number * 10 + (c - '0');
+            } else if (c == '+') {
                 res += sign * number;
                 number = 0;
-                res *= stack.pop();                  // stack.pop() is the sign before the parenthesis
-                res += stack.pop();                  // stack.pop() now is the result calculated before the parenthesis
+                sign = 1;
+            } else if (c == '-') {
+                res += sign * number;
+                number = 0;
+                sign = -1;
+            } else if (c == '(') {
+                stack.push(res); // we push the result first, then sign;
+                stack.push(sign); // reset the sign and result for the value in the parenthesis
+                res = 0;
+                sign = 1;
+            } else if (c == ')') {
+                res += sign * number;
+                number = 0;
+                res *= stack.pop(); // stack.pop() is the sign before the parenthesis
+                res += stack.pop(); // stack.pop() now is the result calculated before the parenthesis
             }
         }
-        if (number != 0) res += number * sign;
+        if (number != 0)
+            res += number * sign;
         return res;
     }
 }
