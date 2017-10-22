@@ -17,7 +17,7 @@ class Solution {
         }
         StringBuilder res = new StringBuilder();
 
-        if ((numerator > 0) ^ (denominator > 0)) {      // numerator * denominator cannot handle overflow, -1 * - 2,147,483,647
+        if ((numerator > 0) ^ (denominator > 0)) { // numerator * denominator cannot handle overflow, -1 * - 2,147,483,647
             res.append('-');
         }
 
