@@ -20,7 +20,9 @@ public class Solution {
             if (stack.isEmpty() || height >= heights[stack.peek()]) stack.push(i);
             else{
                 int top = stack.pop();
-                maxArea = Math.max(maxArea, heights[top] * (stack.isEmpty() ? i : i - 1 - stack.peek()));
+                // stack.peek() is the last one on the left side that smaller than heights[i]
+                // the length to the current position is i - (stack.peek() + 1)
+                maxArea = Math.max(maxArea, heights[top] * (stack.isEmpty() ? i : i - 1 - stack.peek())); 
                 i--;
             }
         }
