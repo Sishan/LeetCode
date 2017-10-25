@@ -29,6 +29,7 @@ class Solution {
         if (flowers == null || flowers.length == 0){
             return -1;
         }
+        
         TreeSet<Integer> bloom = new TreeSet<Integer>();
         //set.add(0);
         //set.add(flowers.length + 1);
