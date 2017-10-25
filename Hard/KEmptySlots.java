@@ -27,6 +27,8 @@ The given array will be in the range [1, 20000].
 class Solution {
     public int kEmptySlots(int[] flowers, int k) {
         TreeSet<Integer> set = new TreeSet<Integer>();
+        //set.add(0);
+        //set.add(flowers.length + 1);
         for (int i = 0; i < flowers.length; i++) {
             int cur = flowers[i];
 
