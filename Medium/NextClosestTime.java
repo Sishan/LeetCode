@@ -18,41 +18,39 @@ Explanation: The next closest time choosing from digits 2, 3, 5, 9, is 22:22. It
 class Solution {
     public String nextClosestTime(String time) {
         String timeNum = time.substring(0, 2) + time.substring(3);
-        char[] dgtChar = timeNum.toCharArray();
         int[] digits = new int[4];
         int[] sorted = new int[4];
         int[] origin = new int[4];
-        for (int i = 0; i < dgtChar.length; i++) {
-            int cur = (int) (dgtChar[i] - '0');
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < timeNum.length(); i++) {
+            int cur = (int) (timeNum.charAt(i) - '0');
             digits[i] = cur;
             sorted[i] = cur;
         }
         origin = Arrays.copyOf(digits, digits.length);
         Arrays.sort(sorted);
 
-        int tmp_4 = replaceDigit(sorted, digits[3], 9);
-        digits[3] = tmp_4;
-        if (tmp_4 > origin[3]) {
-            return new String("" + digits[0] + digits[1] + ":" + digits[2] + digits[3]);
+        digits[3] = replaceDigit(sorted, digits[3], 9);
+        if (digits[3] > origin[3]) {
+            return res.append(digits[0]).append(digits[1]).append(':').append(digits[2]).append(digits[3]).toString();
         }
 
-        int tmp_3 = replaceDigit(sorted, digits[2], 5);
-        digits[2] = tmp_3;
-        if (tmp_3 > origin[2]) {
-            return new String("" + digits[0] + digits[1] + ":" + digits[2] + digits[3]);
+        digits[2] = replaceDigit(sorted, digits[2], 5);
+        if (digits[2] > origin[2]) {
+            return res.append(digits[0]).append(digits[1]).append(':').append(digits[2]).append(digits[3]).toString();
         }
 
-        int tmp_2 = digits[0] == 2 ? replaceDigit(sorted, digits[1], 3)
-                : replaceDigit(sorted, digits[1], 9);
-        digits[1] = tmp_2;
-        if (tmp_2 > origin[1]) {
-            return new String("" + digits[0] + digits[1] + ":" + digits[2] + digits[3]);
+        if (digits[0] == 2){
+            digits[1] = replaceDigit(sorted, digits[1], 3);
+        } else {
+            digits[1] = replaceDigit(sorted, digits[1], 9);
+        }
+        if (digits[1] > origin[1]) {
+            return res.append(digits[0]).append(digits[1]).append(':').append(digits[2]).append(digits[3]).toString();
         }
 
-        int tmp_1 = replaceDigit(sorted, digits[0], 2);
-        digits[0] = tmp_1;
-        return new String("" + digits[0] + digits[1] + ":" + digits[2] + digits[3]);
-
+        digits[0] = replaceDigit(sorted, digits[0], 2);
+        return res.append(digits[0]).append(digits[1]).append(':').append(digits[2]).append(digits[3]).toString();
     }
 
     public int replaceDigit(int[] sorted, int cur, int upperBound) {

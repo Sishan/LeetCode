@@ -26,22 +26,23 @@ The given array will be in the range [1, 20000].
 
 class Solution {
     public int kEmptySlots(int[] flowers, int k) {
-        TreeSet<Integer> set = new TreeSet<Integer>();
+        if (flowers == null || flowers.length == 0){
+            return -1;
+        }
+        TreeSet<Integer> bloom = new TreeSet<Integer>();
         //set.add(0);
         //set.add(flowers.length + 1);
-        for (int i = 0; i < flowers.length; i++) {
+        for (int i = 0; i < flowers.length; i++){
             int cur = flowers[i];
-
-            Integer pre = set.lower(cur);
-            if (pre != null && cur - pre - 1 == k) {
+            
+            Integer pre = bloom.lower(cur);
+            Integer post = bloom.higher(cur);
+            
+            if ((pre != null && cur - pre - 1 == k)  || (post != null && post - cur - 1 == k)){
                 return i + 1;
             }
-
-            Integer post = set.higher(cur);
-            if (post != null && post - cur - 1 == k) {
-                return i + 1;
-            }
-            set.add(cur);
+            
+            bloom.add(cur);
         }
         return -1;
     }
