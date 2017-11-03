@@ -11,8 +11,9 @@ Your algorithm should run in linear runtime complexity. Could you implement it u
 public class Solution {
     public int missingNumber(int[] nums) {
         int xor = 0, i = 0;
-        for (i = 0; i < nums.length; i++){
+        while(i < nums.length){
             xor ^= i ^ nums[i];
+            i++;
         }
         return xor ^ i;
     }

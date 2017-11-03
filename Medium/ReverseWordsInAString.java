@@ -30,3 +30,34 @@ public class Solution {
     }
 }
 
+/*
+public class Solution {
+    public String reverseWords(String s) {
+        if (s == null || s.length() == 0){
+            return s;
+        }
+        String input = s.trim().replaceAll(" +", " ");
+        char[] sChar = input.toCharArray();
+        reverse(sChar, 0, sChar.length - 1);
+        int start = 0;
+        for (int i = 0; i < sChar.length; i++){
+            if (sChar[i] == ' '){
+                reverse(sChar, start, i - 1);
+                start = i + 1;
+            }
+        }
+        reverse(sChar, start, sChar.length - 1);
+        return new String(sChar);
+    }
+    
+    public void reverse(char[] sChar, int left, int right){
+        while (left < right){
+            char tmp = sChar[left];
+            sChar[left] = sChar[right];
+            sChar[right] = tmp;
+            left++;
+            right--;            
+        }
+    }
+}
+*/
