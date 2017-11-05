@@ -23,23 +23,25 @@ Note: Recursive solution is trivial, could you do it iteratively?
  * }
  */
 
-public class Solution {
+class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<Integer>();
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        while ( root != null || !stack.isEmpty()){
-        	if (root != null){
-        		stack.push(root);
-        		root = root.left;
-        	}
-        	else{
-        	    root = stack.pop();
-        		res.add(root.val);
-        		root = root.right;
-        	}
+        if (root == null){
+            return res;
+        }
+        Stack<TreeNode> stk = new Stack<TreeNode>();
+        TreeNode cur = root;
+        while (cur != null || !stk.isEmpty()){
+            while(cur != null){
+                stk.push(cur);
+                cur = cur.left;
+            }
+            cur = stk.pop();
+            res.add(cur.val);
+            cur = cur.right;
         }
         return res;
-    }
+    }  
 }
 
 /*
