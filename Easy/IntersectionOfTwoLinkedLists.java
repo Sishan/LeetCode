@@ -21,32 +21,33 @@ Your code should preferably run in O(n) time and use only O(1) memory.
 
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        int lenA=0,lenB=0;
-        ListNode c1=headA,c2=headB;
-        while(c1!=null||c2!=null){		// measure the length of list A
-            if(c1!=null){
-                c1=c1.next;
-                lenA++;
-            }
-            if(c2!=null){				// measure the length of list B
-                c2=c2.next;
-                lenB++;
-            }
+        int lenA = 0, lenB = 0;
+        ListNode c1 = headA, c2 = headB;
+
+        while (c1 != null && c1.next != null) { // measure the length of list A
+            c1 = c1.next;
+            lenA++;
         }
-        if (c1 != c2) return null;
-        c1=headA;						// redirect to the head
-        c2=headB;
-        while(lenA>lenB){				// stop at the intersection point if there is
-            c1=c1.next;                 // make A, B the same length
+        while (c2 != null && c2.next != null) { // measure the length of list B
+            c2 = c2.next;
+            lenB++;
+        }
+
+        if (c1 != c2)
+            return null;
+        c1 = headA; // redirect to the head
+        c2 = headB;
+        while (lenA > lenB) { // stop at the intersection point if there is
+            c1 = c1.next; // make A, B the same length
             lenA--;
         }
-        while(lenB>lenA){
-            c2=c2.next;
+        while (lenB > lenA) {
+            c2 = c2.next;
             lenB--;
         }
-        while(c1!= c2){               // if c1!=null so there is surely an intersection point
-            c1=c1.next;                // intersection begins
-            c2=c2.next;
+        while (c1 != c2) { // if c1!=null so there is surely an intersection point
+            c1 = c1.next; // intersection begins
+            c2 = c2.next;
         }
         return c1;
     }
