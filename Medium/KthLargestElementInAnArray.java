@@ -22,8 +22,8 @@ class Solution {
     }
 }
 
-/*
-class Solution {
+
+class Solution2 {
     public int findKthLargest(int[] nums, int k) {
         int n = nums.length;
         int p = QuickSelect(nums, 0, n - 1, n - k + 1);  // n - k + 1 since the quickselect method find kth smallest item
@@ -56,4 +56,3 @@ class Solution {
         nums[right] = tmp;
     }
 }
-*/
