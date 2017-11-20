@@ -19,8 +19,7 @@ public class Solution {
         fast = digitSquareSum(fast);
         }
 
-        if (slow == 1) return true;
-        else return false;
+        return slow == 1;
     }
 
     public int digitSquareSum(int n) {
