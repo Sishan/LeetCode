@@ -17,35 +17,37 @@ solution.reset();
 solution.shuffle();
 */
 
-public class Solution {
+class Solution {
     private int[] nums;
     private Random random;
-    
+
     public Solution(int[] nums) {
         this.nums = nums;
-        random = new Random();
+        this.random = new Random();
     }
-    
+
     /** Resets the array to its original configuration and return it. */
     public int[] reset() {
-        return nums;
+        return this.nums;
     }
-    
+
     /** Returns a random shuffling of the array. */
     public int[] shuffle() {
-        if (nums == null) return null;
-        int[] copy = nums.clone();
-        for (int i = 1; i < copy.length; i++){
-            int j = random.nextInt(i + 1);
-            swap(copy, j, i);
+        if (this.nums == null) {
+            return null;
         }
-        return copy;
+        int[] ran = this.nums.clone();
+        for (int i = 1; i < nums.length; i++) {
+            int j = random.nextInt(i + 1);
+            swap(ran, i, j);
+        }
+        return ran;
     }
-    
-    public void swap(int[] copy, int i, int j){
-        int tmp = copy[i];
-        copy[i] = copy[j];
-        copy[j] = tmp;
+
+    public void swap(int[] nums, int left, int right) {
+        int tmp = nums[left];
+        nums[left] = nums[right];
+        nums[right] = tmp;
     }
 }
 
@@ -55,8 +57,3 @@ public class Solution {
  * int[] param_1 = obj.reset();
  * int[] param_2 = obj.shuffle();
  */
-
-/*
-Fisher–Yates shuffle method
-Reference: https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
-*/

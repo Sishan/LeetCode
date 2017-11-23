@@ -10,20 +10,29 @@ Sort a linked list using insertion sort.
  *     ListNode(int x) { val = x; }
  * }
  */
-public class Solution {
+class Solution {
     public ListNode insertionSortList(ListNode head) {
-        if (head == null || head.next == null) return head;
-        
-        ListNode dummy = new ListNode(0);
-        while(head != null){
-            ListNode pre = dummy;
-            while(pre.next != null &&  pre.next.val <= head.val) pre = pre.next;
-            ListNode tmp = head.next;
-            head.next = pre.next;
-            pre.next = head;
-            head = tmp;
+        if (head == null) {
+            return head;
         }
-        return dummy.next;
+
+        ListNode helper = new ListNode(0);
+        ListNode cur = head;
+        ListNode pre = helper;
+        ListNode next = null;
+
+        while (cur != null) {
+            next = cur.next;
+            while (pre.next != null && pre.next.val < cur.val) {
+                pre = pre.next;
+            }
+
+            cur.next = pre.next;
+            pre.next = cur;
+            pre = helper;
+            cur = next;
+        }
+        return helper.next;
     }
 }
 
