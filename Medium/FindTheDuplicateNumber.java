@@ -8,19 +8,19 @@ Your runtime complexity should be less than O(n2).
 There is only one duplicate number in the array, but it could be repeated more than once.
 */
 
-public class Solution {
+class Solution {
     public int findDuplicate(int[] nums) {
-        if (nums == null || nums.length == 0) return -1;
         int slow = 0, fast = 0;
-        while (fast < nums.length && nums[fast] < nums.length){
+        int len = nums.length;
+
+        while (fast < len && nums[fast] < len) {
             slow = nums[slow];
             fast = nums[nums[fast]];
-            
-            if (slow == fast){
-                int slowRedo = 0;
-                while (slowRedo != slow){
-                    slowRedo = nums[slowRedo];
+            if (slow == fast) {
+                fast = 0;
+                while (slow != fast) {
                     slow = nums[slow];
+                    fast = nums[fast];
                 }
                 return slow;
             }
@@ -30,5 +30,30 @@ public class Solution {
 }
 
 /*
-Similar idea to Linked List Cycle II
+When they meet, assume slow tag move s steps, fast tag move 2s steps, the circle length is c.
+There must be:
+
+2s = s + n*c
+
+=> s = n*c....(1)
+
+Then, assume the length from start point to entry point is x, and the length from the entry
+point to the meet point is a.
+There must be: s = x+a....(2)
+
+So, from (1) and (2)
+
+x+a = s = n*c
+
+=> x+a = n*c
+
+=> x+a = (n-1)*c+c
+
+=> x = (n-1)*c+c-a
+
+c-a means the length from the meetpoint to the entry point.
+
+LHS means: the new tag from start point move x steps.
+
+RHS means: the slow tag moves (n-1) cycles plus the length from the meetpoint to the entry point.
 */
