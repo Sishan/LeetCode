@@ -7,13 +7,11 @@ Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one
 
 public class Solution {
     public int addDigits(int num) {
-        if (num == 0){
+        if (num == 0) {
             return 0;
-        }
-        else if (num % 9 == 0){
+        } else if (num % 9 == 0) {
             return 9;
-        }
-        else{
+        } else {
             return num % 9;
         }
     }
