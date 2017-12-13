@@ -12,40 +12,43 @@ Some examples:
 Note: Do not use the eval built-in library function.
 */
 
-public class Solution {
+class Solution {
     public int calculate(String s) {
-        if(s == null || s.length() == 0)
+        if (s == null || s.length() == 0) {
             return 0;
-        boolean divide = false;
-        int result = 0, sign = 1, num = 0, preNum = 0;
-        for(char c: s.toCharArray()) {
-            if(c >= '0' && c <= '9')
-                num = num * 10 + c -'0';
-            else if(c == '+' || c == '-' || c == '*' || c == '/') {
-                if(divide) {
-                    num = preNum/num;
-                    divide = false;
+        }
+        int len = s.length();
+        int num = 0;
+        char sign = '+';
+        Stack<Integer> stk = new Stack<Integer>();
+        for (int i = 0; i < s.length(); i++) {
+            char cur = s.charAt(i);
+            if (Character.isDigit(cur)) {
+                num = num * 10 + (int) (cur - '0');
+            }
+            if (!Character.isDigit(cur) && cur != ' ' || i == len - 1) {
+                if (sign == '-') {
+                    stk.push(-num);
                 }
-                //record the temp result, think about case 2 * 5 / 2
-                if(c == '/') {
-                    divide = true;
-                    preNum = num * sign;
-                    sign = 1;
-                } else if(c == '*'){
-                    sign *= num;
-                } else {
-                    result += sign * num;
-                    sign = c == '+' ? 1 : -1;
+                if (sign == '+') {
+                    stk.push(num);
                 }
+                if (sign == '*') {
+                    stk.push(stk.pop() * num);
+                }
+                if (sign == '/') {
+                    stk.push(stk.pop() / num);
+                }
+                sign = cur;
                 num = 0;
             }
         }
-        if(num > 0) {
-            if(divide)
-                num = preNum/num;
-            result += sign * num;
+
+        int res = 0;
+        for (int i : stk) {
+            res += i;
         }
-        return result;
+        return res;
     }
 }
 
