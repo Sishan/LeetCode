@@ -27,20 +27,49 @@ Given the list [1,[4,[6]]], return 27. (one 1 at depth 1, one 4 at depth 2, and 
  *     public List<NestedInteger> getList();
  * }
  */
-public class Solution {
+/**
+ * // This is the interface that allows for creating nested lists.
+ * // You should not implement it, or speculate about its implementation
+ * public interface NestedInteger {
+ *     // Constructor initializes an empty nested list.
+ *     public NestedInteger();
+ *
+ *     // Constructor initializes a single integer.
+ *     public NestedInteger(int value);
+ *
+ *     // @return true if this NestedInteger holds a single integer, rather than a nested list.
+ *     public boolean isInteger();
+ *
+ *     // @return the single integer that this NestedInteger holds, if it holds a single integer
+ *     // Return null if this NestedInteger holds a nested list
+ *     public Integer getInteger();
+ *
+ *     // Set this NestedInteger to hold a single integer.
+ *     public void setInteger(int value);
+ *
+ *     // Set this NestedInteger to hold a nested list and adds a nested integer to it.
+ *     public void add(NestedInteger ni);
+ *
+ *     // @return the nested list that this NestedInteger holds, if it holds a nested list
+ *     // Return null if this NestedInteger holds a single integer
+ *     public List<NestedInteger> getList();
+ * }
+ */
+class Solution {
     public int depthSum(List<NestedInteger> nestedList) {
-        if (nestedList == null || nestedList.size() == 0) return 0;
-        return findSum(nestedList, 1);
+        if (nestedList == null) {
+            return 0;
+        }
+        return helper(nestedList, 1);
     }
     
-    public int findSum(List<NestedInteger> nestedList, int level){
+    public int helper(List<NestedInteger> nestedList, int level) {
         int res = 0;
-        for (int i = 0; i < nestedList.size(); i++){
-            if (nestedList.get(i).isInteger()){
-                res += nestedList.get(i).getInteger() * level;
-            } 
-            else{
-                res += findSum(nestedList.get(i).getList(), level + 1);
+        for (NestedInteger cur : nestedList) { 
+            if (cur.isInteger()) {
+                res += cur.getInteger() * level;
+            }else {
+                res += helper(cur.getList(), level + 1);
             }
         }
         return res;
