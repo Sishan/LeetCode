@@ -21,19 +21,20 @@ class Solution {
     class Pair {
         int x;
         int y;
-        int sum;
+        int val;
 
-        public Pair(int _x, int _y, int _sum) {
+        public Pair(int _x, int _y, int _val) {
             x = _x;
             y = _y;
-            sum = _sum;
+            val = _val;
         }
     }
 
     public int kthSmallest(int[][] matrix, int k) {
         int n = matrix.length;
-        PriorityQueue<Pair> pq = new PriorityQueue<Pair>((a, b) -> a.sum - b.sum);
-        for (int i = 0; i < n; i++) {
+        int m = martix[0].length;
+        PriorityQueue<Pair> pq = new PriorityQueue<Pair>((a, b) -> a.val - b.val);
+        for (int i = 0; i < m; i++) {
             pq.offer(new Pair(0, i, matrix[0][i]));
         }
         for (int j = 0; j < k - 1; j++) {
