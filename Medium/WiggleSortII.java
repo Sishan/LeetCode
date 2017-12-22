@@ -39,6 +39,29 @@ public class Solution {
 
     // {0,1,2,3,4,5} -> {1,3,5,0,2,4}
     // find mapped new inde
+    /*
+    Original Index => Mapped Index
+    0 => (1 + 2 x 0) % 6 = 1 % 6 = 1
+    1 => (1 + 2 x 1) % 6 = 3 % 6 = 3
+    2 => (1 + 2 x 2) % 6 = 5 % 6 = 5
+
+    These are what's less than median, if we continue this with indexes 3, 4, 5 we will cycle again:
+    3 => (1 + 2 x 3) % 6 = 7 % 6 = 1
+    4 => (1 + 2 x 4) % 6 = 9 % 6 = 3
+    5 => (1 + 2 x 5) % 6 = 11 % 6 = 5
+
+    and we don't want that, so for indexes larger than n/2 we want them to be even, (n|1) does that exactly. What n|1 does it that it gets the next odd number to n if it was even
+    if n = 6 for example 110 | 1 = 111 = 7
+    if n = 7 for example 111 | 1 = 111 = 7
+
+    and this is what we want, instead of cycling the odd numbers again we want them to be even, and odd % odd number is even so updating the formula to :
+    (1 + 2*index) % (n | 1)
+
+    Then we have:
+    3 => (1 + 2 x 3) % 7 = 7 % 7 = 0
+    4 => (1 + 2 x 4) % 7 = 9 % 7 = 2
+    5 => (1 + 2 x 5) % 7 = 11 % 7 = 4
+    */
     public int newIndex(int index, int len) {
         return (1 + 2 * index) % (len | 1);
     }
