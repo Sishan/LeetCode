@@ -32,6 +32,10 @@ Similarly, for 'twos', we can get 'twos = twos ^ A[i]; if (ones* == 1) then twos
 'twos = (twos ^ A[i]) & ~ones'. Notice that 'ones*' is the value of 'ones' after calculation, 
 that is why twos is calculated later.
 
+First time number appear -> save it in "ones"
+Second time -> clear "ones" but save it in "twos" for later check
+Third time -> try to save in "ones" but value saved in "twos" clear it.
+
 Reference:
 https://discuss.leetcode.com/topic/2031/challenge-me-thx
 */

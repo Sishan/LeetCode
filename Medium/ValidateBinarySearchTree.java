@@ -40,3 +40,46 @@ class Solution {
         return isValidChecker(root.left, min, root.val) && isValidChecker(root.right, root.val, max);
     }
 }
+
+/*
+class Solution {
+    class BSTIterator{
+        stack<TreeNode *> s;
+        void update(TreeNode *cur){
+            while(cur){
+                s.push(cur);
+                cur = cur->left;
+            }
+        }
+    public: 
+        BSTIterator(TreeNode *root){
+             update(root);
+        }
+        
+        bool hasNext(){
+            return !s.empty();
+        }
+        
+        TreeNode* next(){
+            if(!hasNext()) return NULL;
+            TreeNode *t = s.top();
+            s.pop();
+            update(t->right);
+            return t;
+        }
+    };
+public:
+    bool isValidBST(TreeNode *root) {
+        BSTIterator iterator(root);
+        int prev = INT_MIN;
+        while (iterator.hasNext()) {
+            int curr = iterator.next()->val;
+            if (prev >= curr) {
+                return false;
+             }
+             prev = curr;
+        }
+        return true;
+    }
+};
+*/

@@ -30,8 +30,8 @@ class Solution {
         }
 
         for (int i = 0; i < prerequisites.length; i++) {
-            degree[prerequisites[i][1]]++;
-            graph[prerequisites[i][0]].add(prerequisites[i][1]);
+            degree[prerequisites[i][0]]++;
+            graph[prerequisites[i][1]].add(prerequisites[i][0]);
         }
 
         for (int i = 0; i < degree.length; i++) {
