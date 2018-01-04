@@ -74,6 +74,7 @@ class Solution {
 
     public int findRoot(int[] root, int id) {
         while (root[id] != id) {
+            root[id] = root[root[id]];
             id = root[id];
         }
         return id;
