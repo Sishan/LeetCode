@@ -18,15 +18,24 @@ A, B have equal lengths in range [1, 100].
 A[i], B[i] are integers in range [0, 10^5].
 */
 
-class Solution {
-public:
-    vector<int> anagramMappings(vector<int>& A, vector<int>& B) {
+#include <vector>
+#include <unordered_map>
+
+using namespace std;
+
+class Solution
+{
+  public:
+    vector<int> anagramMappings(vector<int> &A, vector<int> &B)
+    {
         vector<int> res;
         unordered_map<int, int> map;
-        for (int i = 0; i < A.size(); i++) {
+        for (int i = 0; i < A.size(); i++)
+        {
             map[B[i]] = i;
         }
-        for (int i = 0; i < A.size(); i++) {
+        for (int i = 0; i < A.size(); i++)
+        {
             res.push_back(map[A[i]]);
         }
         return res;
