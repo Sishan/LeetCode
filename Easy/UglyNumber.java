@@ -8,19 +8,24 @@ Note that 1 is typically treated as an ugly number
 
 public class Solution {
     public boolean isUgly(int num) {
-      if (num <= 0) return false;
-      while (num != 1){
-          if (num % 2 == 0) num /= 2;
-          else if (num % 3 == 0) num /= 3;
-          else if (num % 5 == 0) num /= 5;
-          else return false;
-      }
-      return true;
+        if (num <= 0)
+            return false;
+        while (num != 1) {
+            if (num % 2 == 0)
+                num /= 2;
+            else if (num % 3 == 0)
+                num /= 3;
+            else if (num % 5 == 0)
+                num /= 5;
+            else
+                return false;
+        }
+        return true;
     }
 }
 
 /*
-http://blog.csdn.net/nisxiya/article/details/46767595
-http://blog.csdn.net/martin_liang/article/details/45692933
-http://blog.csdn.net/u010786672/article/details/44259927
-*/
+ * http://blog.csdn.net/nisxiya/article/details/46767595
+ * http://blog.csdn.net/martin_liang/article/details/45692933
+ * http://blog.csdn.net/u010786672/article/details/44259927
+ */
